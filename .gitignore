@@ -50,3 +50,17 @@
 
 # Embedded web-server pid file
 /.web-server-pid
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# App-specific ignores
+.idea
+.DS_Store
+
+###> squizlabs/php_codesniffer ###
+/.phpcs-cache
+/phpcs.xml
+###< squizlabs/php_codesniffer ###
