@@ -3,5 +3,14 @@ api_platform:
         paths: ['%kernel.project_dir%/src/Entity']
     patch_formats:
         json: ['application/merge-patch+json']
+    enable_swagger_ui: false
+    enable_re_doc: false
     swagger:
+        api_keys:
+            apiKey:
+                name: Authorization
+                type: header
         versions: [3]
+    exception_to_status:
+        App\Exeption\RegistrationFailedExeption: 500
+        Doctrine\ORM\Exception\ORMException: 500
